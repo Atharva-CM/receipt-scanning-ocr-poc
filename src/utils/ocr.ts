@@ -2,7 +2,7 @@ import axios from 'axios';
 import Tesseract from 'tesseract.js';
 
 export const performOCR = async (imageData: string) => {
-  const apiKey = 'AIzaSyBzzGyv4-k38MLahwLg9OAtk3jY9vmPMvM';
+  const apiKey = process.env.OCR_API_KEY;
   const url = `https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`;
 
   const request = {
